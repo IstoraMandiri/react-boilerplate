@@ -6,11 +6,12 @@
     "start": "webpack-dev-server",
     "clean": "rm -rf dist",
     "serve": "http-server dist -p 9000",
-    "build": "webpack --config webpack.production.config.js  --progress --profile --colors"
+    "build": "npm run clean; cross-env NODE_ENV=production webpack --config webpack.production.config.js  --progress --profile --colors"
   },
   "author": "Chris Hitchcott <hitchcott@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^5.2.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-hot-loader": "4.3.11",
